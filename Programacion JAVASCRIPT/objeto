@@ -1,0 +1,10 @@
+var carro = {
+    marca: "Mazda",
+    modelo: "mx5",
+    fabricacion: 2010,
+    detalledelcarro: function(){
+        console.log("carro " + this.modelo + " " + this.fabricacion)
+    }
+}
+
+carro.detalledelcarro();

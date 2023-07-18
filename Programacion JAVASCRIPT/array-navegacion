@@ -1,0 +1,30 @@
+var articulos = [
+    { nombre: "Bici", costo: 3000},
+    { nombre: "Tv", costo: 2500},
+    { nombre: "Libro", costo: 1000},
+    { nombre: "Celular", costo: 10000},
+    { nombre: "Computador", costo: 25000},
+    { nombre: "Teclado", costo: 5500},
+    { nombre: "Mouse", costo: 4500},
+];
+
+//Filtrar todas las propiedades con cierta condicion creando un nuevo array
+var articulosFiltrados = articulos.filter(function(articulo){
+    return articulo.costo <= 5000
+});
+//mostrar toda la propiedad
+var nombreArticulos = articulos.map(function(articulo){
+    return articulo.nombre;
+});
+//mostrar la primer propiedad que cumpla la condicion
+var encuentraArticulo = articulos.find(function(articulo){
+    return articulo.nombre === "Computador"
+});
+//mostrar las propiedades enteras sin crear un nuevo array
+articulos.forEach(function(articulo){
+    console.log(articulo.nombre);
+});
+//hacer validaciones de verdadero o falso
+var articulosBaratos = articulos.some(function(articulo){
+    return articulo.costo <=1000;
+});
